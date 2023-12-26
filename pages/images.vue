@@ -22,17 +22,17 @@ export default {
         return {
             imageList: [
                 {
-                    src: "../static/travel.jpg",
+                    src: "travel.jpg",
                     caption: "Tooltipped image depicting air travel to various locations",
                     title: ''
                 },
                 {
-                    src: "../static/urban_vacation.jpg",
+                    src: "urban_vacation.jpg",
                     caption: "Tooltipped image of Paris near Eiffel Tower",
                     title: ''
                 },
                 {
-                    src: "../static/tropical_vacation.jpg",
+                    src: "tropical_vacation.jpg",
                     caption: "Tooltipped image of a tropical island with pier",
                     title: ''
                 }

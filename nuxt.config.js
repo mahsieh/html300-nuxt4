@@ -1,4 +1,6 @@
 export default {
+  target: 'static',
+  devtools: { enabled: true },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'assign9',
@@ -37,6 +39,8 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    // https://ui.nuxt.com/
+    '@nuxt/ui'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

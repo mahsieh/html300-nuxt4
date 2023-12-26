@@ -22,7 +22,7 @@ export default {
             required: true,
             /*use a validation against image source to verify file type*/
             validator: function(value) {
-                const validFormats = /\.(jpg)$/i
+                const validFormats = /\.(jpg|png|jpeg)$/i
                 return validFormats.test(value)
             }
         },
