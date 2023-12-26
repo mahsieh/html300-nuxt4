@@ -1,6 +1,6 @@
 <template>
     <div class="images">
-        <h1>This is an images page</h1>
+        <h2>This is an images page</h2>
         <FormComponent />
         <!--iterate through images object and display each image individually-->
         <div v-for="image in imageList">
@@ -41,7 +41,26 @@ export default {
                 }
             ],
         }
+    },
+    head: () => {
+    return {
+      title: "Travel Buddy Images",
+      meta: [
+        {
+          charset: "utf-8"
+        },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1"
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: "Helping you find pictures of your planned travels"
+        }
+      ]
     }
+  },
 }
 </script>
   
