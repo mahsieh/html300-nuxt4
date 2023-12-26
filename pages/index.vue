@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
-    <h1>This is the home page.</h1>
+    <!--adjusted h tags-->
+    <h2>This is the home page.</h2>
     <FormComponent />
     <section class="container" v-if="countries">
       <countryCard v-for="country of countries" :key="country.id" :country="country" />

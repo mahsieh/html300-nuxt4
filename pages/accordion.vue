@@ -3,7 +3,7 @@
         <FormComponent />
         <div class="about">
             <div class="accordion">
-                <h1>This is an accordion page of news from "country".</h1>
+                <h2>This is an accordion page of news from "country".</h2>
 
                 <!--iterate through carded content and display in accordion-->
                 <div class="card" v-for="(newsarticle, count) in cards">
@@ -56,7 +56,26 @@ export default {
                 }
             ]
         }
+    },
+    head: () => {
+    return {
+      title: "Travel Buddy Accordion Page",
+      meta: [
+        {
+          charset: "utf-8"
+        },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1"
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: "Helping learn news about your planned travel locations"
+        }
+      ]
     }
+  },
 }
 </script>
   

@@ -1,0 +1,3 @@
+I learned that that SEO is critical for bringing users to your website. I think this was more true in the past, but continues to be true even as content is accessed by different devices and channels now.  I also didn't know that Google dings websites for linking to other websites that have poor SEO, or use h tags poorly.
+
+I plan to use metatags and adjust the h1-h6 tags to increase my SEO score, as well as make information more easy to find.

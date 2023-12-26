@@ -26,7 +26,26 @@
         // handle the toggling of the button/text
         toggle: false
       }
+    },
+    head: () => {
+    return {
+      title: "Travel Buddy About",
+      meta: [
+        {
+          charset: "utf-8"
+        },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1"
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: "About Travel Buddy"
+        }
+      ]
     }
+  },
   }
   </script>
   
