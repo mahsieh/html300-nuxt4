@@ -19,25 +19,6 @@ export default {
     // create the Form component
     name: "FormComponent",
     // define 3 props for the Form Component
-    props: {
-        src: {
-            type: String,
-            required: true,
-            /*use a validation against image source to verify file type*/
-            validator: function (value) {
-                const validFormats = /\.(jpg|png|jpeg)$/i
-                return validFormats.test(value)
-            }
-        },
-        caption: {
-            type: String,
-            required: true,
-        },
-        title: {
-            type: String,
-            default: 'Travel Vibes'
-        }
-    }
 }
 </script>
 

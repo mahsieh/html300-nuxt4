@@ -1,23 +1,23 @@
 <template>
   <div class="wrapper">
+    <h1>This is the home page.</h1>
+    <FormComponent />
     <section class="container" v-if="countries">
-      <countryCard v-for="country of countries"
-      :key="country.id"
-      :country="country" 
-      />
+      <countryCard v-for="country of countries" :key="country.id" :country="country" />
     </section>
   </div>
-
 </template>
 
 <script>
 import axios from 'axios';
 import countryCard from '../components/countryCard.vue';
+import FormComponent from '../components/FormComponent.vue'
 
 export default {
   name: 'HomePage',
   components: {
-    countryCard
+    countryCard,
+    FormComponent
   },
   head: () => {
     return {
@@ -45,7 +45,7 @@ export default {
       errored: false,
     }
   },
-  mounted () {
+  mounted() {
     axios
       .get('https://restcountries.com/v3.1/all')
       .then(response => (this.countries = response.data))

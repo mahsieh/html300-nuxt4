@@ -17,7 +17,7 @@ export default {
     components: {
         pageHeader,
         pageFooter,
-        navigation
+        navigation,
     }
 }
 </script>

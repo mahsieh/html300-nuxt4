@@ -1,8 +1,11 @@
 <template>
-    <!--define a div around the image for the border toggle-->
-    <div @click="borderToggle">
-        <!--use bootstrap to have responsive images-->
-        <img class="img-fluid" :src="src" :caption="caption" :title="title" :class="{ 'image-border': borderVisible }"> <!--based on state of image, assign a class-->
+    <div>
+        <!--define a div around the image for the border toggle-->
+        <div @click="borderToggle">
+            <!--use bootstrap to have responsive images-->
+            <img class="img-fluid" :src="src" :caption="caption" :title="title" :class="{ 'image-border': borderVisible }">
+            <!--based on state of image, assign a class-->
+        </div>
     </div>
 </template>
 
@@ -15,13 +18,15 @@ export default {
     name: "ImageComponent",
     // actually use the mixin
     mixins: [borderToggle],
+    components: {
+    },
     // define 3 props for the imagecomponent
     props: {
         src: {
             type: String,
             required: true,
             /*use a validation against image source to verify file type*/
-            validator: function(value) {
+            validator: function (value) {
                 const validFormats = /\.(jpg|png|jpeg)$/i
                 return validFormats.test(value)
             }
@@ -32,7 +37,7 @@ export default {
         },
         title: {
             type: String,
-            default: 'Travel Vibes'            
+            default: 'Travel Vibes'
         }
     }
 }

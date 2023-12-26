@@ -1,6 +1,7 @@
 <template>
     <div class="images">
         <h1>This is an images page</h1>
+        <FormComponent />
         <!--iterate through images object and display each image individually-->
         <div v-for="image in imageList">
             <!--actually use the image component-->
@@ -12,11 +13,13 @@
 <script>
 // import the image component we created for use
 import ImageComponent from '../components/ImageComponent.vue'
+import FormComponent from '~/components/FormComponent.vue';
 
 export default {
     name: "ImagesView",
     components: {
         ImageComponent,
+        FormComponent
     },
     data: () => {
         return {

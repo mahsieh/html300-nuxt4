@@ -1,29 +1,39 @@
 <template>
-    <div class="accordion">
-        <h1>This is an accordion page of news from "country".</h1>
+    <div>
+        <FormComponent />
+        <div class="about">
+            <div class="accordion">
+                <h1>This is an accordion page of news from "country".</h1>
 
-        <!--iterate through carded content and display in accordion-->
-        <div class="card" v-for="(newsarticle, count) in cards">
-            <div class="card-header" :id="newsarticle.title">
-                <h5 class="mb-0">
+                <!--iterate through carded content and display in accordion-->
+                <div class="card" v-for="(newsarticle, count) in cards">
+                    <div class="card-header" :id="newsarticle.title">
+                        <h5 class="mb-0">
 
-                    <button class="btn btn-link" data-toggle="collapse show" :data-target="'#collapse' + count"
-                        :aria-expanded="newsarticle.toggle" :aria-controls="'collapse' + count">{{ newsarticle.title
-                        }}</button>
-                </h5>
-            </div>
+                            <button class="btn btn-link" data-toggle="collapse show" :data-target="'#collapse' + count"
+                                :aria-expanded="newsarticle.toggle" :aria-controls="'collapse' + count">{{ newsarticle.title
+                                }}</button>
+                        </h5>
+                    </div>
 
-            <div :id="'collapse' + count" class="collapse show" :aria-labelledby="newsarticle.title"
-                data-parent=".accordion"> <!--corrected to target the accordion class instead of id-->
-                <div class="card-body">{{ newsarticle.body }}</div>
+                    <div :id="'collapse' + count" class="collapse show" :aria-labelledby="newsarticle.title"
+                        data-parent=".accordion"> <!--corrected to target the accordion class instead of id-->
+                        <div class="card-body">{{ newsarticle.body }}</div>
+                    </div>
+                </div>
+
             </div>
         </div>
-
     </div>
 </template>
 
 <script>
+import FormComponent from '../components/FormComponent.vue'
+
 export default {
+    components: {
+        FormComponent
+    },
     data() {
         return {
             // data for cards of the accordion stored here, inside objects 
@@ -55,6 +65,7 @@ export default {
     .about {
         min-height: 100vh;
         display: flex;
+        flex-direction: row;
         align-items: center;
     }
 }
